@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e76f0bf502b444a9a28cf882530cfbda" Name="Diagram1">
+        <EntityTypeShape EntityType="JBecerraProgramacionNCapasModel.Aseguradora" Width="1.5" PointX="14.25" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JBecerraProgramacionNCapasModel.Colonia" Width="1.5" PointX="7.5" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="JBecerraProgramacionNCapasModel.Dependiente" Width="1.5" PointX="21.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="JBecerraProgramacionNCapasModel.DependienteTipo" Width="1.5" PointX="19.5" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="JBecerraProgramacionNCapasModel.Direccion" Width="1.5" PointX="9.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JBecerraProgramacionNCapasModel.Empleado" Width="1.5" PointX="19.5" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="JBecerraProgramacionNCapasModel.Empresa" Width="1.5" PointX="17.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JBecerraProgramacionNCapasModel.Estado" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="JBecerraProgramacionNCapasModel.Municipio" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="JBecerraProgramacionNCapasModel.Pai" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="JBecerraProgramacionNCapasModel.Poliza" Width="1.5" PointX="17.25" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="JBecerraProgramacionNCapasModel.Rol" Width="1.5" PointX="9.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="JBecerraProgramacionNCapasModel.SubPoliza" Width="1.5" PointX="15" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="JBecerraProgramacionNCapasModel.Usuario" Width="1.5" PointX="12" PointY="3.5" IsExpanded="true" />
+        <AssociationConnector Association="JBecerraProgramacionNCapasModel.FK__Asegurado__IdUsu__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="JBecerraProgramacionNCapasModel.FK__Colonia__IdMunic__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="JBecerraProgramacionNCapasModel.FK__Direccion__IdCol__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="JBecerraProgramacionNCapasModel.FK__Dependien__IdDep__5812160E" ManuallyRouted="false" />
+        <AssociationConnector Association="JBecerraProgramacionNCapasModel.FK__Dependien__Numer__5DCAEF64" ManuallyRouted="false" />
+        <AssociationConnector Association="JBecerraProgramacionNCapasModel.FK__Usuario__IdDirec__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="JBecerraProgramacionNCapasModel.FK__Empleado__IdEmpr__5BE2A6F2" ManuallyRouted="false" />
+        <AssociationConnector Association="JBecerraProgramacionNCapasModel.FK__Empleado__IdPoli__5CD6CB2B" ManuallyRouted="false" />
+        <AssociationConnector Association="JBecerraProgramacionNCapasModel.FK__Estado__IdPais__34C8D9D1" ManuallyRouted="false" />
+        <AssociationConnector Association="JBecerraProgramacionNCapasModel.FK__Municipio__IdEst__37A5467C" ManuallyRouted="false" />
+        <AssociationConnector Association="JBecerraProgramacionNCapasModel.FK__Poliza__IdSubPol__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="JBecerraProgramacionNCapasModel.FK__Poliza__IdUsuari__4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="JBecerraProgramacionNCapasModel.FK__Usuario__IdRol__5EBF139D" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

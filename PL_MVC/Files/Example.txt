@@ -1,0 +1,4 @@
+Nombre|Telefono|Email|DireccionWeb
+El duende|5578965412|elduende@gmail.com|elduende.com.mx
+La costeña|5512947586|lacosteña@gmail.com|lacosteña.com.mx
+Jumex|5545379125|jumex@gmail.com|jumex.com.mx

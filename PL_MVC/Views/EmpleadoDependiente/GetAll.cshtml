@@ -1,0 +1,78 @@
+﻿@model ML.Empleado
+@{
+    ViewBag.Title = "EmpleadoDependiente";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>EmpleadoDependiente</h2>
+
+<div class="row">
+    @using (Html.BeginForm("GetAll", "EmpleadoDependiente",FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <div class="form-inline">
+            <div class="col-md-3">
+                @Html.DropDownListFor(model => model.Empresa.IdEmpresa, new SelectList(Model.Empresa.Empresas, "IdEmpresa", "Nombre"), "Seleciona una Empresa", new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Empresa.IdEmpresa)
+            </div>
+            <div class="col-md-3">
+                <input type="submit" value="Buscar" class="btn btn-info" />
+            </div>
+        </div>
+    }
+    @Html.HiddenFor(model => model.Empresa.IdEmpresa)
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <h5>Seleccione un empleado para asignarle un dependiente</h5>
+        <hr />
+    </div>
+</div>
+
+<table class="table table-bordered table-responsive table-striped">
+    <thead>
+        <tr>
+            <td>Asignar</td>
+            <td class="hidden">NumeroEmpleado</td>
+            <td>Nombre</td>
+            <td>RFC</td>
+            <td>Email</td>
+            <td>Telefono</td>
+            <td>Fecha de nacimiento</td>
+            <td>NSS</td>
+            <td>Fecha de Ingreso</td>
+            <td>Foto</td>
+            <td>Empresa</td>
+            <td>Poliza</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (ML.Empleado empleado in Model.Empleados)
+        {
+            <tr>
+                <td><a class="btn btn-warning glyphicon glyphicon-pencil" href="@Url.Action("Dependiente", "EmpleadoDependiente", new { NumeroEmpleado = empleado.NumeroEmpleado })"></a></td>
+                <td class="hidden">@empleado.NumeroEmpleado</td>
+                <td>@empleado.Nombre @empleado.ApellidoPaterno @empleado.ApellidoMaterno</td>
+                <td>@empleado.RFC</td>
+                <td>@empleado.Email</td>
+                <td>@empleado.Telefono</td>
+                <td>@empleado.FechaNacimiento</td>
+                <td>@empleado.NSS</td>
+                <td>@empleado.FechaIngreso</td>
+                @if (empleado.Foto != null)
+                {
+                    <td><img src="data:image/jpeg;base64,@Convert.ToBase64String(empleado.Foto)" style=" height: 100px; width: 130px;" /></td>
+                }
+                else
+                {
+                    <td><img src="~/Content/ImageNotFound.jpg" style=" height:150px; width:150px;" /></td>
+                }
+                <td>@empleado.Empresa.Nombre</td>
+                <td>@empleado.Poliza.IdPoliza</td>
+            </tr>
+        }
+
+
+
+
+    </tbody>
+</table>

@@ -1,0 +1,74 @@
+﻿@model ML.Empresa
+@{
+    ViewBag.Title = "Empresas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Empresa</h2>
+
+<div class="row">
+    <div class="col-md-12">
+        <h5>Seleccione una empresa para editarla o (+) para agregar...</h5>
+        <hr />
+    </div>
+</div>
+
+<div style="float:right;">
+    @Html.ActionLink("+", "Form", "Empresa", htmlAttributes: new { @class = "btn btn-success" })
+</div>
+
+<div class="row">
+    @using (Html.BeginForm("GetAll", "Empresa", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <div class="col-md-3">
+            <input type="file" name="archivoTxt" />
+        </div>
+        <div class="col-md-1">
+            <input type="submit" value="Procesar" class="btn btn-info" />
+        </div>
+    }
+    @if(Session["RutaDescarga"]!= null)
+    {
+    <div class="col-md-1">
+        @Html.ActionLink("Dowload Log.txt", "Download", "Empresa", htmlAttributes: new { @class = "btn btn-danger" })
+    </div>
+    }
+</div>
+<br />
+<table id="example" class="table table-bordered table-responsive">
+    <thead>
+        <tr>
+            <td>Editar</td>
+            <td class="hidden">IdEmpresa</td>
+            <td>Nombre</td>
+            <td>Telefono</td>
+            <td>Email</td>
+            <td>Direccion Web</td>
+            <td>logo</td>
+            <td>Eliminar</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (ML.Empresa empresa in Model.Empresas)
+        {
+            <tr>
+                <td><a class="btn btn-warning glyphicon glyphicon-edit" href="@Url.Action("Form", "Empresa", new { IdEmpresa = empresa.IdEmpresa })"></a></td>
+                <td class="hidden">@empresa = empresa.IdEmpresa</td>
+                <td>@empresa.Nombre</td>
+                <td>@empresa.Telefono</td>
+                <td>@empresa.Email</td>
+                <td>@empresa.DireccionWeb</td>
+                @if (empresa.Logo != null)
+                {
+                    <td><img src="data:image/jpeg;base64,@Convert.ToBase64String(empresa.Logo)" style=" height:100px; width: 150px;" /></td>
+                }
+                else
+                {
+                    <td><img src="~/Content/ImageNotFound.jpg" style=" height:150px; width:150px;" /></td>
+                }
+                <td><a class="btn btn-danger glyphicon glyphicon-trash" href="@Url.Action("Delete", "Empresa", new { IdEmpresa = empresa.IdEmpresa })" onclick="return confirm('Estas seguro que deseas eliminar este registro?');"></a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+

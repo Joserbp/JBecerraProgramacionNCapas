@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{05642A4B-EDA4-44E8-B747-78FAD291FB1A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DL_EF</RootNamespace>
+    <AssemblyName>DL_EF</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Aseguradora.cs">
+      <DependentUpon>JBecerraProgramacionNCapas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AseguradoraGetAll_Result.cs">
+      <DependentUpon>JBecerraProgramacionNCapas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AseguradoraGetById_Result.cs">
+      <DependentUpon>JBecerraProgramacionNCapas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Colonia.cs">
+      <DependentUpon>JBecerraProgramacionNCapas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ColoniaGetByIdMunicipio_Result.cs">
+      <DependentUpon>JBecerraProgramacionNCapas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dependiente.cs">
+      <DependentUpon>JBecerraProgramacionNCapas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DependienteGetAll_Result.cs">
+      <DependentUpon>JBecerraProgramacionNCapas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DependienteGetById_Result.cs">
+      <DependentUpon>JBecerraProgramacionNCapas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DependienteGetByNumeroEmpleado_Result.cs">
+      <DependentUpon>JBecerraProgramacionNCapas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DependienteTipo.cs">
+      <DependentUpon>JBecerraProgramacionNCapas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DependienteTipoGetAll_Result.cs">
+      <DependentUpon>JBecerraProgramacionNCapas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Direccion.cs">
+      <DependentUpon>JBecerraProgramacionNCapas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DireccionGetByIdColonia_Result.cs">
+      <DependentUpon>JBecerraProgramacionNCapas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Empleado.cs">
+      <DependentUpon>JBecerraProgramacionNCapas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmpleadoGetAllByEmpresa_Result.cs">
+      <DependentUpon>JBecerraProgramacionNCapas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmpleadoGetAll_Result.cs">
+      <DependentUpon>JBecerraProgramacionNCapas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmpleadoGetByNumeroEmpreado_Result.cs">
+      <DependentUpon>JBecerraProgramacionNCapas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Empresa.cs">
+      <DependentUpon>JBecerraProgramacionNCapas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmpresaGetAll_Result.cs">
+      <DependentUpon>JBecerraProgramacionNCapas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmpresaGetById_Result.cs">
+      <DependentUpon>JBecerraProgramacionNCapas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Estado.cs">
+      <DependentUpon>JBecerraProgramacionNCapas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EstadoGetByIdPais_Result.cs">
+      <DependentUpon>JBecerraProgramacionNCapas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="JBecerraProgramacionNCapas.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JBecerraProgramacionNCapas.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="JBecerraProgramacionNCapas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JBecerraProgramacionNCapas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="JBecerraProgramacionNCapas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JBecerraProgramacionNCapas.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Municipio.cs">
+      <DependentUpon>JBecerraProgramacionNCapas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MunicipioGetByIdEstado_Result.cs">
+      <DependentUpon>JBecerraProgramacionNCapas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Pai.cs">
+      <DependentUpon>JBecerraProgramacionNCapas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PaisGetAll_Result.cs">
+      <DependentUpon>JBecerraProgramacionNCapas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Poliza.cs">
+      <DependentUpon>JBecerraProgramacionNCapas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PolizaGetAll_Result.cs">
+      <DependentUpon>JBecerraProgramacionNCapas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PolizaGetById_Result.cs">
+      <DependentUpon>JBecerraProgramacionNCapas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rol.cs">
+      <DependentUpon>JBecerraProgramacionNCapas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RolGetAll_Result.cs">
+      <DependentUpon>JBecerraProgramacionNCapas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SubPoliza.cs">
+      <DependentUpon>JBecerraProgramacionNCapas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SubPolizaGetAll_Result.cs">
+      <DependentUpon>JBecerraProgramacionNCapas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario.cs">
+      <DependentUpon>JBecerraProgramacionNCapas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioGetAll_Result.cs">
+      <DependentUpon>JBecerraProgramacionNCapas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioGetByID_Result.cs">
+      <DependentUpon>JBecerraProgramacionNCapas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioGetByUserName_Result.cs">
+      <DependentUpon>JBecerraProgramacionNCapas.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <EntityDeploy Include="JBecerraProgramacionNCapas.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>JBecerraProgramacionNCapas.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="JBecerraProgramacionNCapas.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>JBecerraProgramacionNCapas.edmx</DependentUpon>
+      <LastGenOutput>JBecerraProgramacionNCapas.Context.cs</LastGenOutput>
+    </None>
+    <None Include="JBecerraProgramacionNCapas.edmx.diagram">
+      <DependentUpon>JBecerraProgramacionNCapas.edmx</DependentUpon>
+    </None>
+    <None Include="JBecerraProgramacionNCapas.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>JBecerraProgramacionNCapas.edmx</DependentUpon>
+      <LastGenOutput>JBecerraProgramacionNCapas.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

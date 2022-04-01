@@ -1,0 +1,1 @@
+No se insertó el usuario con nombre: prueba 1 Apellido Paterno:prueba 1 Error: An error occurred while executing the command definition. See the inner exception for details.
